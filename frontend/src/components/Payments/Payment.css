@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+
+
+
+
+html {
+  font-size: 62.5%;
+}
+
+/*body {
+  font-family: 'Roboto Mono', sans-serif;
+  color: white;
+  font-weight: 400;
+  background-color: #0a0a0a;
+  border-bottom: 1.6rem solid rgb(217, 31, 42);
+  min-height: 100vh;
+
+}
+*/
+.groovy-icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+.container-payment{
+  max-width: 80rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+
+
+.header {
+  align-self: stretch;
+}
+
+.header h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.header h1 {
+  /* Non-accessible color */
+  color: white;
+  /* color: #af8602; */
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+
+.header h1::before,
+.header h1::after {
+  display: block;
+  content: '';
+  height: 3px;
+  width: 12rem;
+  background-color: rgb(217, 31, 42);
+  position: absolute;
+  top: calc(50% - 1px);
+}
+
+.header h1::before {
+  left: 0;
+}
+
+.header h1::after {
+  right: 0;
+}
+
+/* *************** */
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.subscription h2 {
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.plans>p {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1;
+  width: 80%;
+
+}
+
+.plans h3 {
+  width: 80%;
+  text-align: center;
+  padding: 0.6rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  border-bottom: 2px solid currentColor;
+}
+
+.plans h4 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.plans {
+  width: 25%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+
+  height: 65vh;
+  width: 55vw;
+
+}
+
+
+
+
+
+.plans p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  padding: 0.5rem;
+
+}
+
+.plans span {
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+
+
+
+
+.footer {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 2rem;
+
+}
+
+
+
+.btn {
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: #1c1c1c;
+  padding: 1.4rem 3.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-style: dotted;
+  border-radius: 5%;
+  margin: 2rem;
+}
+
+
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  transition: all .2s;
+  animation: moveup .9s ease-out .25s;
+  animation-fill-mode: backwards;
+
+}
+
+.btn:hover {
+  transform: translateY(-.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+
+
+}
+
+.btn:active {
+  transform: translateY(-.1rem);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+  background-color: red;
+  color: white;
+}
