@@ -17,6 +17,7 @@ const months = [
   "November",
   "December",
 ];
+const checkList = ["Pop", "Hip-Hop", "EDM", "Rock"];
 
 const Signup = () => {
   const [userDetails, setUserDetails] = useState({
@@ -27,6 +28,7 @@ const Signup = () => {
     month: "",
     password: "",
     gender: "",
+    genre:[{}]
   });
   const navigate = useNavigate();
   const { isAuthenticated } = useSelector((state) => state.account);
@@ -62,6 +64,7 @@ const Signup = () => {
         month: "",
         password: "",
         gender: "",
+        genre:[{}],
       });
       toast.success(data.message);
       navigate("/");
@@ -124,7 +127,7 @@ const Signup = () => {
                   What's your email?{" "}
                 </label>
                 <input
-                  type="text"
+                  type="email"
                   id="email"
                   name="email"
                   value={userDetails.email}
@@ -270,12 +273,28 @@ const Signup = () => {
                       checked={userDetails.gender === "O"}
                       onChange={onChange}
                     />
+                    
+                    
+
+
                     <label htmlFor="o" className="ml-2 inline-block">
                       Prefer not to say
                     </label>
                   </div>
                 </div>
               </div>
+              <div className="checkList">
+                        <div className="title">Pick your favorite genres:</div>
+                          <div className="list-container">
+                            {checkList.map((item, index) => (
+                              
+                            <div key={index}>
+                              <input value={item} type="checkbox"  />
+                            <span>{item}</span>
+                          </div>
+                          ))}
+                        </div>
+                        </div>
               <div className="w-4/5 mx-auto text-left py-4">
                 <div className="my-4 flex items-center gap-4">
                   <input
@@ -287,7 +306,7 @@ const Signup = () => {
                   />
                   <p className="text-sm">
                     I would prefer not to receive marketing messages from
-                    Spotify
+                    Groovy
                   </p>
                 </div>
                 <div className="my-4 flex items-center gap-4">
@@ -298,7 +317,7 @@ const Signup = () => {
                     id=""
                   />
                   <p className="text-sm">
-                    Share my registration data with Spotify's content providers
+                    Share my registration data with Groovy's content providers
                     for marketing purposes.
                   </p>
                 </div>
@@ -313,7 +332,7 @@ const Signup = () => {
                   To learn more about how Groovy collects, uses, shares and
                   protects your personal data, please see
                   <Link to="/" className="text-red-500">
-                    Spotify's Privacy Policy.
+                    Groovy's Privacy Policy.
                   </Link>{" "}
                 </p>
               </div>

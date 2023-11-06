@@ -74,6 +74,7 @@ const Login = () => {
                 value={userDetails.username}
                 onChange={onChange}
                 name="username"
+                autoComplete="off"
                 placeholder="Email or username"
                 className="block w-full rounded-[4px] border-0  text-gray-300 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-[3px] focus:ring-inset focus:ring-white-600 outline-none p-3 hover:ring-white bg-[#1a1919]"
               />

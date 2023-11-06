@@ -156,7 +156,7 @@ const SongBar = () => {
                             {masterSong?.artist || "Arijit Singh"}
                         </span>
                     </div>
-                    <AiOutlineHeart onClick={addToLiked} className="ml-3 cursor-pointer hover:text-green-400" />
+                    <AiOutlineHeart onClick={addToLiked} className="ml-3 cursor-pointer hover:text-red-600" />
                     <CgScreen className="ml-3" />
                 </div>
             </div>
